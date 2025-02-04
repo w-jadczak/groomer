@@ -1,12 +1,10 @@
 from rest_framework import serializers
-from users.models import User
+
+from pets.models import Pet
 
 
-class UserSerializer(serializers.ModelSerializer):
+class PerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ('id', 'username', 'email', 'mobile', 'role', 'is_active', 'created_at', 'updated_at')
-        read_only_fields = ('id', 'created_at', 'updated_at')
-        extra_kwargs = {
-            'password': {'write_only': True}
-        }
+        model = Pet
+        fields = ["id", "owner", "name", "species", "breed", "age", "created_at", "updated_at"]
+        read_only_fields = ["id", "created_at", "updated_at"]

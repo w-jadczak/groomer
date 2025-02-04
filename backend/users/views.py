@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 
-from pets.serializers import UserSerializer
+from users.serializers import UserSerializer
 from users.models import User
 
 
