@@ -1,11 +1,12 @@
 
 exclude = ["migrations/", "build/", "dist/", ".venv/", "__pycache__/", "*.pyc"]
 line-length = 120
+fix = true
 
 target-version = "py311"
 
 [lint]
-select = ["E", "F", "W", "B", "I", "DJ"]
+select = ["E", "F", "W", "B", "I", "R", "DJ"]
 ignore = ["F403", "E501"]
 
 [format]
