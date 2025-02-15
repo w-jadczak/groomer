@@ -5,7 +5,7 @@ from django.db import models
 class User(AbstractUser):
     mobile = models.BigIntegerField(unique=True, null=False)
     email = models.EmailField(unique=True, blank=False, null=False)
-    role = models.CharField(max_length=50, null=False)
+    role = models.CharField(max_length=50, null=False, default="customer")
     is_active = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
