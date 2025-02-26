@@ -1,11 +1,10 @@
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
 
 UserModel = get_user_model()
 
