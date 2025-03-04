@@ -7,7 +7,7 @@ class CustomTokenObtainPairViewTest(TestCase):
         self.user = User.objects.create_user(
             username="test", password="password123?", email="test@test.com", mobile="9876543210", is_active=True
         )
-        self.token_url = "/api/auth/token/"
+        self.token_url = "/api/auth/login/"
 
     def test_should_return_token(self):
         response = self.client.post(self.token_url, {"username": "test", "password": "password123?"}, format="json")
@@ -67,7 +67,7 @@ class LogoutViewTest(TestCase):
         self.user = User.objects.create_user(
             username="test", password="password123?", email="test@test.com", mobile="9876543210", is_active=True
         )
-        response = self.client.post("/api/auth/token/", {"username": "test", "password": "password123?"})
+        response = self.client.post("/api/auth/login/", {"username": "test", "password": "password123?"})
         self.access_token = response.data["access"]
         self.refresh_token = response.data["refresh"]
 
