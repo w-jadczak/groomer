@@ -1,18 +1,18 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HelloWorld from '../components/HelloWorld.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import AppLayout from '@/common/components/AppLayout.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HelloWorld,
+    component: AppLayout,
   },
   // Add more routes here as needed
-];
+]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

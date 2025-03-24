@@ -6,15 +6,33 @@ module.exports = {
     node: true,
     es2021: true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-essential', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'prettier',
+    'plugin:vue/vue3-essential',
+    'plugin:prettier/recommended',
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: ['vue', 'prettier'],
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        semi: false,
+        bracketSameLine: false,
+        htmlWhitespaceSensitivity: 'strict',
+      },
+    ],
     'vue/multi-word-component-names': 'off',
     'no-unused-vars': 'warn',
-    'prettier/prettier': 'error',
+    'vue/component-tags-order': [
+      'error',
+      {
+        order: ['template', 'script', 'style'],
+      },
+    ],
   },
-};
+}
