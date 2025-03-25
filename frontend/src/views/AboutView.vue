@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <div class="bg-blue-500 text-red p-6 font-semibold py-10">Tailwind działa poprawnie!</div>
+    <div class="bg-blue-500 text-red p-6 font-semibold py-5">Tailwind działa poprawnie!</div>
   </div>
 </template>
 
