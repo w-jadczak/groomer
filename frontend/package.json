@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -14,19 +13,18 @@
     "format": "prettier --write \"src/**/*.{vue,js,ts,json}\""
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.15",
-    "@tailwindcss/postcss": "^4.0.16",
-    "@tailwindcss/vite": "^4.0.15",
+    "@headlessui/vue": "^1.7.23",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@heroicons/vue": "^2.2.0",
+    "@tailwindcss/language-server": "^0.14.12",
     "@tsconfig/node22": "^22.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.13.13",
     "@typescript-eslint/parser": "^8.28.0",
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue": "^3.2.0",
     "@vitest/eslint-plugin": "^1.1.36",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
@@ -43,9 +41,10 @@
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-eslint": "^16.3.0",
-    "tailwindcss": "^4.0.15",
+    "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
     "typescript": "~5.8.0",
-    "vite": "^6.2.1",
+    "vite": "^3.2.11",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vitest": "^3.0.8",
     "vue-eslint-parser": "^10.1.1",

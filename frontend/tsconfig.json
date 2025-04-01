@@ -1,8 +1,11 @@
 {
   "files": [],
   "compilerOptions": {
-    "types": ["node"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "postcss.config.cjs"],
   "references": [
     {
       "path": "./tsconfig.node.json"

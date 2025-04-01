@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { RouterView } from "vue-router"
-import AppNav from "@/common/components/AppNav.vue"
+import AppNav from "@/common/components/nav-bar/AppNav.vue"
 import AppFooter from "@/common/components/AppFooter.vue"
 import LoadingIndicator from "@/common/components/LoadingIndicator.vue"
 </script>
