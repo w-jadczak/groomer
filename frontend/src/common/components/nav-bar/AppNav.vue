@@ -20,16 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from "@headlessui/vue"
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/vue/24/outline"
+import { Disclosure } from "@headlessui/vue"
 import MobileMenu from "@/common/components/nav-bar/MobileMenu.vue"
 import DesktopMenu from "@/common/components/nav-bar/DesktopMenu.vue"
 import UserMenu from "@/common/components/nav-bar/UserMenu.vue"
