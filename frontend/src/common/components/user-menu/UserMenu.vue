@@ -5,6 +5,13 @@ import { storeToRefs } from "pinia"
 import { ArrowRightCircleIcon } from "@heroicons/vue/20/solid"
 
 const { isAuthenticated } = storeToRefs(useAuthStore())
+const baseClass = "block px-4 py-2 text-sm text-gray-700"
+
+const getMenuItemClass = (active: boolean) => {
+  return active ? `${baseClass} bg-gray-100 outline-none` : baseClass
+}
+
+const emit = defineEmits(["openSignInModal", "openLogInModal"])
 </script>
 
 <template>
@@ -22,12 +29,9 @@ const { isAuthenticated } = storeToRefs(useAuthStore())
           alt=""
         />
       </MenuButton>
-      <button
-        v-else
-        class="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-      >
-        <ArrowRightCircleIcon class="h-10 w-10 text-indigo-500" />
-      </button>
+      <MenuButton v-else class="relative flex rounded-full bg-white text-sm">
+        <ArrowRightCircleIcon class="h-10 w-10 text-indigo-500 hover:text-indigo-700" />
+      </MenuButton>
     </div>
     <transition
       enter-active-class="transition ease-out duration-200"
@@ -40,36 +44,25 @@ const { isAuthenticated } = storeToRefs(useAuthStore())
       <MenuItems
         class="absolute right-0 top-full mt-0 z-10 w-48 rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5"
       >
-        <MenuItem v-slot="{ active }">
-          <a
-            href="#"
-            :class="[
-              active ? 'bg-gray-100 outline-none' : '',
-              'block px-4 py-2 text-sm text-gray-700',
-            ]"
-            >Your Profile</a
-          >
-        </MenuItem>
-        <MenuItem class="flex" v-slot="{ active }">
-          <a
-            href="#"
-            :class="[
-              active ? 'bg-gray-100 outline-none' : '',
-              'block px-4 py-2 text-sm text-gray-700',
-            ]"
-            >Settings</a
-          >
-        </MenuItem>
-        <MenuItem v-slot="{ active }">
-          <a
-            href="#"
-            :class="[
-              active ? 'bg-gray-100 outline-none' : '',
-              'block px-4 py-2 text-sm text-gray-700',
-            ]"
-            >Sign out</a
-          >
-        </MenuItem>
+        <div v-if="isAuthenticated">
+          <MenuItem v-slot="{ active }">
+            <a href="#" :class="getMenuItemClass(active)">Your Profile</a>
+          </MenuItem>
+          <MenuItem class="flex" v-slot="{ active }">
+            <a href="#" :class="getMenuItemClass(active)">Settings</a>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <a href="#" :class="getMenuItemClass(active)">Sign out</a>
+          </MenuItem>
+        </div>
+        <div v-else>
+          <MenuItem v-slot="{ active }">
+            <a :class="getMenuItemClass(active)" @click="emit('openLogInModal')"> Log In </a>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <a :class="getMenuItemClass(active)" @click="emit('openSignInModal')"> Register </a>
+          </MenuItem>
+        </div>
       </MenuItems>
     </transition>
   </Menu>

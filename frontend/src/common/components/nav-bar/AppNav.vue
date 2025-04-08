@@ -12,16 +12,20 @@
           </div>
           <DesktopMenu />
         </div>
-        <UserMenu />
+        <UserMenu @open-log-in-modal="isLoginModalOpen = true" />
         <MobileMenu />
       </div>
     </div>
   </Disclosure>
+  <LogInModal v-if="isLoginModalOpen" v-model:is-open="isLoginModalOpen" />
 </template>
 
 <script setup lang="ts">
 import { Disclosure } from "@headlessui/vue"
 import MobileMenu from "@/common/components/nav-bar/MobileMenu.vue"
 import DesktopMenu from "@/common/components/nav-bar/DesktopMenu.vue"
-import UserMenu from "@/common/components/nav-bar/UserMenu.vue"
+import UserMenu from "@/common/components/user-menu/UserMenu.vue"
+import LogInModal from "@/app/landing/auth/components/LogInModal.vue"
+
+const isLoginModalOpen = defineModel("is-modal-open", { type: Boolean, default: false })
 </script>
