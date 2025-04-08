@@ -1,11 +1,17 @@
 <script setup lang="ts">
 import { MenuButton, MenuItem, MenuItems, Menu } from "@headlessui/vue"
+import { useAuthStore } from "@/common/stores/useAuthStore.ts"
+import { storeToRefs } from "pinia"
+import { ArrowRightCircleIcon } from "@heroicons/vue/20/solid"
+
+const { isAuthenticated } = storeToRefs(useAuthStore())
 </script>
 
 <template>
   <Menu as="div" class="relative ml-3 flex items-center">
     <div>
       <MenuButton
+        v-if="isAuthenticated"
         class="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
       >
         <span class="absolute -inset-1.5" />
@@ -16,6 +22,12 @@ import { MenuButton, MenuItem, MenuItems, Menu } from "@headlessui/vue"
           alt=""
         />
       </MenuButton>
+      <button
+        v-else
+        class="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      >
+        <ArrowRightCircleIcon class="h-10 w-10 text-indigo-500" />
+      </button>
     </div>
     <transition
       enter-active-class="transition ease-out duration-200"

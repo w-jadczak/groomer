@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { jwt_decode } from "jwt-decode"
+import { jwtDecode } from "jwt-decode"
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
@@ -12,7 +12,7 @@ export const useAuthStore = defineStore("auth", {
     loadUserFromToken() {
       if (this.token) {
         try {
-          this.user = jwt_decode(this.token) as User
+          this.user = jwtDecode(this.token) as User
           this.isAuthenticated = true
         } catch (error) {
           console.error("Invalid token", error)
@@ -20,18 +20,18 @@ export const useAuthStore = defineStore("auth", {
         }
       }
     },
-  },
 
-  login(token: string) {
-    this.token = token
-    localStorage.setItem("token", token)
-    this.loadUserFromToken()
-  },
+    login(token: string) {
+      this.token = token
+      localStorage.setItem("token", token)
+      this.loadUserFromToken()
+    },
 
-  logout() {
-    this.token = null
-    this.user = null
-    this.isAuthenticated = false
-    localStorage.removeItem("token")
+    logout() {
+      this.token = null
+      this.user = null
+      this.isAuthenticated = false
+      localStorage.removeItem("token")
+    },
   },
 })
