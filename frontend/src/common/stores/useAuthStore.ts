@@ -1,11 +1,12 @@
 import { defineStore } from "pinia"
 import { jwtDecode } from "jwt-decode"
+import {useStorage} from "@vueuse/core";
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
-    token: localStorage.getItem("token") || null,
-    user: null as User | null,
-    isAuthenticated: false,
+    token: useStorage('token', null as string | null),
+    user: useStorage('user', null as User | null),
+    isAuthenticated: useStorage('isAuthenticated', false)
   }),
 
   actions: {
@@ -31,7 +32,11 @@ export const useAuthStore = defineStore("auth", {
       this.token = null
       this.user = null
       this.isAuthenticated = false
-      localStorage.removeItem("token")
     },
+    init(){
+      if(this.token && !this.user){
+        this.loadUserFromToken()
+      }
+    }
   },
 })

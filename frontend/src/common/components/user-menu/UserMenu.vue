@@ -3,12 +3,17 @@ import { MenuButton, MenuItem, MenuItems, Menu } from "@headlessui/vue"
 import { useAuthStore } from "@/common/stores/useAuthStore.ts"
 import { storeToRefs } from "pinia"
 import { ArrowRightCircleIcon } from "@heroicons/vue/20/solid"
+import {useAuth} from "@/app/landing/auth/api/useAuth.ts";
 
 const { isAuthenticated } = storeToRefs(useAuthStore())
 const baseClass = "block px-4 py-2 text-sm text-gray-700"
 
 const getMenuItemClass = (active: boolean) => {
   return active ? `${baseClass} bg-gray-100 outline-none` : baseClass
+}
+const auth = useAuth()
+const logout = async () => {
+  auth.logout()
 }
 
 const emit = defineEmits(["openSignInModal", "openLogInModal"])
@@ -52,7 +57,7 @@ const emit = defineEmits(["openSignInModal", "openLogInModal"])
             <a href="#" :class="getMenuItemClass(active)">Settings</a>
           </MenuItem>
           <MenuItem v-slot="{ active }">
-            <a href="#" :class="getMenuItemClass(active)">Sign out</a>
+            <a href="#" :class="getMenuItemClass(active)" @click="logout">Sign out</a>
           </MenuItem>
         </div>
         <div v-else>
