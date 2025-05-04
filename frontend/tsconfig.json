@@ -1,8 +1,13 @@
 {
   "files": [],
   "compilerOptions": {
-    "types": ["node"],
+    "moduleResolution": "nodenext",
+    "module": "esnext",
+    "target": "esnext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "postcss.config.cjs"],
   "references": [
     {
       "path": "./tsconfig.node.json"
