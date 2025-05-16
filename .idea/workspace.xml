@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd8b5a8a-8a1e-4f14-bcef-c69feb36ceca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/common/components/base-button/BaseButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/api/useAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/auth/api/useAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/components/LogInModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/auth/LogInModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/base-modal/BaseModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/components/base-modal/BaseModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/AppNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/AppNav.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Composition API Component" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,7 +35,6 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2vxHIwcEbmcmgKTAWUTbQ10hg5N" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,14 +43,36 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "feed/pets__endpoint",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\WOWO\\PycharmProjects\\groomer\\frontend\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Users\\WOWO\\PycharmProjects\\groomer\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WOWO\PycharmProjects\groomer\frontend\src\app\landing\auth\forms" />
+      <recent name="C:\Users\WOWO\PycharmProjects\groomer\frontend\src\app\landing\auth" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-c69650fc56ca-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15619.17" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -50,8 +84,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745079728096</updated>
+      <workItem from="1746381557366" duration="2592000" />
+      <workItem from="1746637594652" duration="541000" />
+      <workItem from="1747239495621" duration="1456000" />
+      <workItem from="1747400765446" duration="3685000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

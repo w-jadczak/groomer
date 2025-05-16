@@ -12,12 +12,16 @@
           </div>
           <DesktopMenu />
         </div>
-        <UserMenu @open-log-in-modal="isLoginModalOpen = true" />
+        <UserMenu
+          @open-log-in-modal="isLoginModalOpen = true"
+          @open-sign-in-modal="isRegisterModalOpen = true"
+        />
         <MobileMenu />
       </div>
     </div>
   </Disclosure>
-  <LogInModal v-if="isLoginModalOpen" v-model:is-open="isLoginModalOpen" />
+  <RegisterModal v-if="isRegisterModalOpen" v-model:is-open="isRegisterModalOpen" />
+  <NewLoginModal v-if="isLoginModalOpen" v-model:is-open="isLoginModalOpen" />
 </template>
 
 <script setup lang="ts">
@@ -25,7 +29,10 @@ import { Disclosure } from "@headlessui/vue"
 import MobileMenu from "@/common/components/nav-bar/MobileMenu.vue"
 import DesktopMenu from "@/common/components/nav-bar/DesktopMenu.vue"
 import UserMenu from "@/common/components/user-menu/UserMenu.vue"
-import LogInModal from "@/app/landing/auth/components/LogInModal.vue"
+import NewLoginModal from "@/app/landing/auth/NewLoginModal.vue"
+import RegisterModal from "@/app/landing/auth/components/RegisterModal.vue"
+import { ref } from "vue"
 
-const isLoginModalOpen = defineModel("is-modal-open", { type: Boolean, default: false })
+const isLoginModalOpen = ref(false)
+const isRegisterModalOpen = ref(false)
 </script>
