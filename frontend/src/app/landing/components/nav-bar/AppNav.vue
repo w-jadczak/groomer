@@ -1,5 +1,5 @@
 <template>
-  <Disclosure as="nav" class="bg-white shadow w-full fixed top-0 left-0 z-50">
+  <Disclosure as="nav" class="bg-white shadow w-full fixed top-0 left-0 z-40">
     <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 justify-between">
         <div class="flex">
@@ -20,19 +20,16 @@
       </div>
     </div>
   </Disclosure>
-  <RegisterModal v-if="isRegisterModalOpen" v-model:is-open="isRegisterModalOpen" />
-  <NewLoginModal v-if="isLoginModalOpen" v-model:is-open="isLoginModalOpen" />
+  <LoginModal v-if="isLoginModalOpen" v-model:is-open="isLoginModalOpen" />
 </template>
 
 <script setup lang="ts">
 import { Disclosure } from "@headlessui/vue"
-import MobileMenu from "@/common/components/nav-bar/MobileMenu.vue"
-import DesktopMenu from "@/common/components/nav-bar/DesktopMenu.vue"
-import UserMenu from "@/common/components/user-menu/UserMenu.vue"
-import NewLoginModal from "@/app/landing/auth/NewLoginModal.vue"
-import RegisterModal from "@/app/landing/auth/components/RegisterModal.vue"
+import MobileMenu from "@/app/landing/components/nav-bar/MobileMenu.vue"
+import DesktopMenu from "@/app/landing/components/nav-bar/DesktopMenu.vue"
+import UserMenu from "@/app/landing/components/user-menu/UserMenu.vue"
+import LoginModal from "@/app/landing/auth/components/LoginModal.vue"
 import { ref } from "vue"
 
 const isLoginModalOpen = ref(false)
-const isRegisterModalOpen = ref(false)
 </script>

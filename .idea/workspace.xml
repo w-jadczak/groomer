@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd8b5a8a-8a1e-4f14-bcef-c69feb36ceca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/common/components/base-button/BaseButton.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/api/useAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/auth/api/useAuth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/components/LogInModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/auth/LogInModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/NewLoginModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/auth/components/LoginModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/components/RegisterModal.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/auth/forms/GenericForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/auth/forms/GenericForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/components/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/components/AppLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/routes/landingRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/routes/landingRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/AppFooter.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/common/components/base-modal/BaseModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/components/base-modal/BaseModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/AppNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/AppNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/AppNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/components/nav-bar/AppNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/DesktopMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/components/nav-bar/DesktopMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/nav-bar/MobileMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/components/nav-bar/MobileMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/common/components/user-menu/UserMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/landing/components/user-menu/UserMenu.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Composition API Component" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -39,32 +45,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feed/pets__endpoint",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\WOWO\\PycharmProjects\\groomer\\frontend\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "C:\\Users\\WOWO\\PycharmProjects\\groomer\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fix/login__modal&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\WOWO\\PycharmProjects\\groomer\\frontend\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\WOWO\\PycharmProjects\\groomer\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\WOWO\PycharmProjects\groomer\frontend\src\app\landing\components" />
+      <recent name="C:\Users\WOWO\PycharmProjects\groomer\frontend\src\app\landing\auth\components" />
       <recent name="C:\Users\WOWO\PycharmProjects\groomer\frontend\src\app\landing\auth\forms" />
       <recent name="C:\Users\WOWO\PycharmProjects\groomer\frontend\src\app\landing\auth" />
     </key>
@@ -88,6 +96,8 @@
       <workItem from="1746637594652" duration="541000" />
       <workItem from="1747239495621" duration="1456000" />
       <workItem from="1747400765446" duration="3685000" />
+      <workItem from="1747498820066" duration="610000" />
+      <workItem from="1747850919190" duration="6730000" />
     </task>
     <servers />
   </component>

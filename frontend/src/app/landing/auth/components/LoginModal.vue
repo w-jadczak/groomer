@@ -16,7 +16,7 @@ const onSubmit = async (data: Record<string, string>) => {
 <template>
   <BaseModal v-model:is-open="isOpen">
     <template #dialogPanel>
-      <div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div class="flex max-h-screen flex-1 flex-col justify-center px-6 py-4 lg:px-8">
         <ModalHeader title="Sign in to your account" />
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

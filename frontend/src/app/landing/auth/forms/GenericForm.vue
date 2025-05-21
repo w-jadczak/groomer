@@ -33,7 +33,7 @@ const props = defineProps<{
   fields: {
     name: string
     label: string
-    type: "text" | "password" | "email"
+    type: "text" | "password" | "email" | "number"
     autocomplete?: string
     required?: boolean
   }[]
